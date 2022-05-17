@@ -18,5 +18,4 @@ public class ResourceExecptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
     }
 
-
 }
