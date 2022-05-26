@@ -1,5 +1,6 @@
 package com.ithallomendes.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.ithallomendes.cursomc.enums.TipoCliente;
 
 import javax.naming.Name;
@@ -17,7 +18,7 @@ public class Cliente implements Serializable {
     private String email;
     private String CpfOuCnpj;
     private Integer tipo;
-
+    @JsonManagedReference
     @OneToMany(mappedBy ="cliente")
     private List<Endereco> enderecos = new ArrayList<>();
 
